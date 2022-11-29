@@ -1,11 +1,62 @@
 package Evaluation;
 
+import java.util.Scanner;
+
+
 public class MainRunE {
+	
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("It's me");
+	static void choicesFunction() {
+		
+		System.out.println("***************************");
+		System.out.println("Welcome...Please Select one of the following options:");
+		System.out.println("1. Fetch API And Save in File");
+		System.out.println("2. Search from file");
+//		System.out.println("3. Search from file Unique");
+//		System.out.println("4. Exit the system ");
+	}
+		
+		
 
+	public static void main(String[] args) throws Throwable {
+		Scanner userSc = new Scanner(System.in);
+		choicesFunction();
+		
+		do {
+
+			int userInput = userSc.nextInt();
+			switch (userInput) {
+			case 1:
+				
+				GetRequest GetRequestObject = new GetRequest();
+				GetRequestObject.apiRequestFunction();
+				choicesFunction();
+				
+				break;
+				
+			case 2:
+				
+				
+				
+				break;
+				
+
+			case 3:
+				
+				break;
+
+				
+
+			case 4:
+				System.out.println("Exiting The System Bye See you Again :)!....");
+				System.exit(0);
+				
+				
+				break;
+				
+			}
+
+		} while (true);
 	}
 
 }

@@ -6,4 +6,5 @@
  *
  */
 module EvaluationTask1 {
+	requires java.net.http;
 }
