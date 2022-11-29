@@ -7,8 +7,9 @@ which is the function for the menue where the user choses.
 "GetRequest" where it fetches the data from the API  "https://dog.ceo/api/breeds/image/random", and creates a text
 file to save the data in the api which is called "dogBreedAPI".
 
-- in the second case , a class has been created which is called "Search" where inside it is a scanner where it takes in 
-the user input to search for a word, then if the word is available in the file , the output will be "word is available"
+- in the second case , a class has been created which is called "Search" where inside it is a scanner where at first it takes
+it takes in the number of times the user whats to input a word, and then based on that it will asks the user one by one  what word 
+they want to search for then if the word is available in the file , the output will be "word is available"
 and will display the api, and if the word is not availabe it will will  display that the word is not available.
 
 - the final case is to exit the system.
