@@ -16,8 +16,8 @@ public class GetRequest {
 
         HttpClient apiClient = HttpClient.newHttpClient();
         HttpRequest apiRequest = HttpRequest.newBuilder()
-                .uri(URI.create("https://dog.ceo/api/breeds/image/random"))
-                .build();
+                .uri(URI.create("https://dog.ceo/api/breeds/image/random")) 
+                .build();// fetching the API
 
         HttpResponse<String> fetchAPI = apiClient.send(apiRequest,
                 HttpResponse.BodyHandlers.ofString());

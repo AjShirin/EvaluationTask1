@@ -1,0 +1,14 @@
+- At First a main class has been creted called "MainRunE" where inside it is a function where it is called "choicesFunction()"
+which is the function for the menue where the user choses.
+
+- Next a scanner has been created to take in the user input and then the while loop has been used to repeat.
+
+- after that the SOLID prenciple has been done using the switch/case where it has 2 cases, The first is the 
+"GetRequest" where it fetches the data from the API  "https://dog.ceo/api/breeds/image/random", and creates a text
+file to save the data in the api which is called "dogBreedAPI".
+
+- in the second case , a class has been created which is called "Search" where inside it is a scanner where it takes in 
+the user input to search for a word, then if the word is available in the file , the output will be "word is available"
+and will display the api, and if the word is not availabe it will will  display that the word is not available.
+
+- the final case is to exit the system.
