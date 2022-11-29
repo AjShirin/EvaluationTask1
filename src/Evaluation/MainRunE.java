@@ -12,8 +12,7 @@ public class MainRunE {
 		System.out.println("Welcome...Please Select one of the following options:");
 		System.out.println("1. Fetch API And Save in File");
 		System.out.println("2. Search from file");
-//		System.out.println("3. Search from file Unique");
-//		System.out.println("4. Exit the system ");
+		System.out.println("3. Exit the system ");
 	}
 		
 		
@@ -36,18 +35,16 @@ public class MainRunE {
 				
 			case 2:
 				
+				Search SearchObject = new Search();
+				SearchObject.searchWord();
+				
+				choicesFunction();
 				
 				
 				break;
 				
 
 			case 3:
-				
-				break;
-
-				
-
-			case 4:
 				System.out.println("Exiting The System Bye See you Again :)!....");
 				System.exit(0);
 				
