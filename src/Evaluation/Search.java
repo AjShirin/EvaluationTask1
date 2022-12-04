@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
+import com.google.gson.stream.JsonReader;
+
 public class Search {
 	static Set<String> hashSearchUnique = new HashSet<String>();
 	static List<String> listDuplicateSearch = new ArrayList<>();
@@ -16,50 +18,56 @@ public class Search {
 	public static void searchWord() throws IOException {
 
 		/* with modification */
-		Scanner userNumberSc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
+		String[] words = null;
 
-		System.out.println("Enter the number of words you want to search:");
-		Integer numberOfWords = userNumberSc.nextInt();
+//		System.out.println("Enter the number of words you want to search:");
+//		Integer numberOfWords = sc.nextInt();
 
-		System.out.println("++++++++++++++++");
-		System.out.println("the search will be done one by one.");
-		System.out.println("++++++++++++++++");
+		// list
+		ArrayList<String> wordList = new ArrayList<>(); // all words inside
 
-		for (int i = 0; i < numberOfWords; i++) {
+		boolean findwordsList = true;
+		while (findwordsList) {
 			System.out.println("Please Enter the Word you would like to search for: ");
-			Scanner userSc = new Scanner(System.in);
-			String name = userSc.nextLine();
+			String word = sc.next();
+			wordList.add(word);
+			System.out.println("Press 1 To Add New word , Press 0 To Go Out Of The Option");
+			int exitInput = sc.nextInt();
+			if (exitInput == 0) {
 
-			listDuplicateSearch.add(name);
-			hashSearchUnique.add(name);
+				findwordsList = false;
+			}
+		}
 
-			List<String> lineFromFiles = Files.readAllLines(Paths.get("dogBreedAPI.txt"));
+		System.out.println("The words in array list is:  " + "  " + wordList);
+
+		for (String ws : wordList) { // iterate ion each word in the list
+			List<String> lineFromFiles = Files.readAllLines(Paths.get("dogBreedAPI.txt")); // go to the file
 			for (String lineVariable : lineFromFiles) {
-				if (lineVariable.contains(name)) {
-					System.out.println("Word : " + name + "  is Available yaay!!! :)");
-					System.out.println("++++++++++++++++");
-					System.out.println(lineVariable);
-					System.out.println("++++++++++++++++");
+				if (lineVariable.contains(ws)) {
+					System.out.println("Word : " + ws + "  is Available yaay!!! :)");
+
 				} else {
 
-					System.out.println(name + "  " + "Word not available :(");
-
+					System.out.println(ws + "  " + "Word not available :( Try another word");
 				}
 
 			}
 
 		}
-		
+
+	}
+
+	public static void duplicateWordFind() throws IOException {
 		System.out.println("The Unique search is " + " " + hashSearchUnique);
 
 		for (String search : listDuplicateSearch) {
 			if (hashSearchUnique.add(search) == false) {
 				System.out.println("The Deplicate search are: " + " " + search);
-				
 
 			}
 
 		}
-
 	}
 }

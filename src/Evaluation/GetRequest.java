@@ -10,6 +10,8 @@ import java.net.http.HttpResponse;
 
 
 
+
+
 public class GetRequest {
 	public static void apiRequestFunction()throws IOException, InterruptedException{
 
@@ -24,6 +26,7 @@ public class GetRequest {
 
         System.out.println("The JSON of the API is :" +fetchAPI.body());
         
+               
         /*Write file*/
         String writeToFile = fetchAPI.body();
         
