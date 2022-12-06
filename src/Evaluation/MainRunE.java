@@ -10,10 +10,11 @@ public class MainRunE {
 		
 		System.out.println("***************************");
 		System.out.println("Welcome...Please Select one of the following options:");
-		System.out.println("1. Fetch API And Save in File");
-		System.out.println("2. Search from file");
-		System.out.println("3. Find Duplicates and Unique words ");
-		System.out.println("4. Exit the system ");
+		System.out.println("1. Fetch API And Save it in TXT and PDF File");
+		System.out.println("2. Search from TXT file");
+		System.out.println("3. Search from PDF file");
+		System.out.println("4. Find Duplicates and Unique words "); // This option dosent work 
+		System.out.println("5. Exit the system ");
 	}
 		
 		
@@ -44,16 +45,23 @@ public class MainRunE {
 				
 				break;
 				
-			case 3:
-				Search SearchObjectUD = new Search();
-				SearchObjectUD.duplicateWordFind();
+			case 3: 
+				SearchPDF SearchPDFObject = new SearchPDF();
+				SearchPDFObject.searchWordPDF();
 				choicesFunction();
 				
 				
 				break;
 				
+			case 4: // this case dosent work should check again
+				Search SearchObjectUD = new Search();
+				SearchObjectUD.duplicateWordFind();
+				choicesFunction();
+								
+				break;
+				
 
-			case 4:
+			case 5:
 				System.out.println("Exiting The System Bye See you Again :)!....");
 				System.exit(0);
 				

@@ -9,13 +9,11 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
-import com.google.gson.stream.JsonReader;
-
-public class Search {
+public class SearchPDF {
 	static Set<String> hashSearchUnique = new HashSet<String>();
 	static List<String> listDuplicateSearch = new ArrayList<>();
 
-	public static void searchWord() throws IOException {
+	public static void searchWordPDF() throws IOException {
 
 		/* with modification */
 		Scanner sc = new Scanner(System.in);
@@ -43,7 +41,7 @@ public class Search {
 		//System.out.println("The words in array list is:  " + "  " + wordList); // This line has been done just for Checking
 
 		for (String ws : wordList) { // iterate ion each word in the list
-			List<String> lineFromFiles = Files.readAllLines(Paths.get("dogBreedAPI.txt")); // go to the file
+			List<String> lineFromFiles = Files.readAllLines(Paths.get("dogBreedAPI.pdf")); // go to the file
 			for (String lineVariable : lineFromFiles) {
 				if (lineVariable.contains(ws)) {
 					System.out.println("Word : " + ws + "  is Available yaay!!! :)");

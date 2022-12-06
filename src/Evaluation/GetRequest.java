@@ -31,9 +31,13 @@ public class GetRequest {
         String writeToFile = fetchAPI.body();
         
         try {
-	         FileWriter file = new FileWriter("dogBreedAPI.txt");
-	         file.write(writeToFile.toString());
-	         file.close();
+	         FileWriter fileTxt = new FileWriter("dogBreedAPI.txt");
+	         FileWriter filePDF = new FileWriter("dogBreedAPI.pdf");
+	         fileTxt.write(writeToFile.toString());
+	         filePDF.write(writeToFile.toString());
+	         fileTxt.close();
+	         filePDF.close();
+	         
 	      } catch (IOException e) {
 	         // TODO Auto-generated catch block
 	         e.printStackTrace();
