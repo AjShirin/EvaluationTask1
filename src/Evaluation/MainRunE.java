@@ -14,7 +14,8 @@ public class MainRunE {
 		System.out.println("2. Search from TXT file");
 		System.out.println("3. Search from PDF file");
 		System.out.println("4. Find Duplicates and Unique words "); // This option dosent work 
-		System.out.println("5. Exit the system ");
+		System.out.println("5. Read The |API| File "); 
+		System.out.println("6. Exit the system ");
 	}
 		
 		
@@ -60,8 +61,15 @@ public class MainRunE {
 								
 				break;
 				
+			case 5 :
+				PDFReader PDFReaderObject = new PDFReader();
+				PDFReaderObject.pdfReaderFunction();
+				choicesFunction();
+				
+				break;
+				
 
-			case 5:
+			case 6:
 				System.out.println("Exiting The System Bye See you Again :)!....");
 				System.exit(0);
 				

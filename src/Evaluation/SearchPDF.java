@@ -18,6 +18,7 @@ public class SearchPDF {
 		/* with modification */
 		Scanner sc = new Scanner(System.in);
 		String[] words = null;
+		int count=0;
 
 //		System.out.println("Enter the number of words you want to search:");
 //		Integer numberOfWords = sc.nextInt();
@@ -51,6 +52,12 @@ public class SearchPDF {
 					System.out.println(ws + "  " + "Word not available :( Try another word");
 				}
 
+			}
+			if (count!=0){ // check for count not equal to zero
+				System.out.println("The given word is present for" +count+ " Times in the file");
+			}
+			else {
+				System.out.println("the word is not available in file");
 			}
 
 		}
