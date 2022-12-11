@@ -15,7 +15,8 @@ public class MainRunE {
 		System.out.println("3. Search from PDF file");
 		System.out.println("4. Find Duplicates and Unique words "); // This option dosent work 
 		System.out.println("5. Read The |API| File "); 
-		System.out.println("6. Exit the system ");
+		System.out.println("6.Search a word from the |API| File "); 
+		System.out.println("7. Exit the system ");
 	}
 		
 		
@@ -68,8 +69,15 @@ public class MainRunE {
 				
 				break;
 				
+			case 6 :
+				SearchPDFRandom SearchPDFRandomObject = new SearchPDFRandom();
+				SearchPDFRandomObject.PDFRandomSearchFunction();
+				choicesFunction();
+				
+				break;
+				
 
-			case 6:
+			case 7:
 				System.out.println("Exiting The System Bye See you Again :)!....");
 				System.exit(0);
 				
